@@ -21,13 +21,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
     <!-- Custom styles for this template -->
-    <link href="pricing.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
   </head>
-  <style>
-    a{text-decoration: none;}
-  </style>
-
 
   <body>
 
@@ -101,16 +97,54 @@
 
   <main>
     <!--  -->
-    <div class="row mb-4">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      You've reached your daily free limit.<strong>Please upgrade to Pro!.</strong> 
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="row mb-5">
       <div class="col">
-        <div class="card text-center border-0">
-          <div class="card-body p-0">
-            <h1 class="mb-4">Check Your Channel Statistics</h1>
+        <div class="card border-0 shadow-lg">
+          <div class="card-body">
+            <h1 class="mb-4 text-center">YouTube Video Audit</h1>
             <div class="row justify-content-center">
               <div class="col-lg-8">
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2 form-control-lg" type="search" placeholder="Enter Your Channel Id" aria-label="Search">
-                  <button class="btn btn-lg btn-danger d-flex" type="submit"><i class="bi bi-search me-2"></i> Search</button>
+                <form action="">
+                  <div class="form-group mb-3">
+                    <div class="input-group has-validation">
+                      <span class="input-group-text px-3"><i class="bi bi-youtube"></i></span>
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="ytVurl" placeholder="Youtube Video URL" required>
+                        <label for="ytVurl">Youtube Video URL</label>
+                      </div>
+                      <div class="valid-feedback">
+                        Youtube URL Is Correct
+                      </div>
+                      <div class="invalid-feedback">
+                        Please Enter Correct URL
+                      </div>
+                    </div>
+                    <div class="ytExample mt-1 text-muted"> Example : https://youtu.be/sfbnjsd4578</div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="input-group has-validation">
+                      <span class="input-group-text px-3"><i class="bi bi-hash"></i></span>
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="twKeyw" placeholder="Lyrical" required>
+                        <label for="twKeyw">Enter Focus Keyword...</label>
+                      </div>
+                      <div class="valid-feedback">
+                        Focus Keyword Ok
+                      </div>
+                      <div class="invalid-feedback">
+                        Please Enter Correct keyword
+                      </div>
+                    </div>
+                    <div class="ytExample mt-1 text-muted"> Example : Lyrical</div>
+                  </div>
+                  <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="button" class="btn btn-danger btn-lg">Video Audit <i class="bi bi-gear-wide-connected"></i></button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -118,42 +152,28 @@
         </div>
       </div>
     </div>
+    <hr>
     <!--  -->
-    <div class="row">
-      <div class="col-5">
+    <div class="row mt-4 mb-5">
+      <div class="col-lg-3">
+
+      </div>
       <!--  -->
-      <div class="card mb-3">
-        <!--  -->
-        <div class="row g-0">
-          <div class="col-md-4 text-center my-auto">
-            <img src="assets/channels4_profile.jpg" class="img-fluid rounded-circle" alt="..." width="100px" height="100px">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <a href="#">@gaming</a>
-              <h5 class="card-title">Gaming</h5>
-              <p class="card-text">YouTube's gaming channel, featuring news, reviews, playthroughs, and more. This channel was generated automatically by Y...</p>
-              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
+      <div class="col-lg-4">
+        <div class="card card-body shadow">
+          <div class="videoThumb" style="background-image: url('https://i.ytimg.com/vi/HrnrqYxYrbk/hqdefault.jpg');"></div>
         </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-5">
         <!--  -->
         <div class="row">
           <div class="col">
-            <ul class="d-flex justify-content-between p-2 px-4 mb-2 border-top">
-              <li class="list-inline-item p-1">Country - <a href="#"> India</a></li>
-              <li class="list-inline-item p-1">Category - <a href="#"> Technology</a></li>
-              <li class="list-inline-item p-1">Lang - Hindi / English</li>
-            </ul>
+            <div class="videoTitle h4 mb-4">ANIMAL: SATRANGA |Ranbir Kapoor, Rashmika |Sandeep V |Arijit, Shreyas P, Siddharth-Garima |Bhushan K
+            </div>
           </div>
         </div>
-        <!--  -->
-      </div>
-      <!--  -->
-      </div>
-      <div class="col-7">
-        <!--  -->
-        <div class="row row-cols-1 row-cols-md-2 g-4 ">
+        <div class="row row-cols-1 row-cols-md-3 mb-3">
           <div class="col">
             <div class="card">
               <div class="card-body">
@@ -165,7 +185,7 @@
           <div class="col">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Subscriber</h5>
+                <h5 class="card-title">Comments</h5>
                 <p class="card-text">57,699</p>
               </div>
             </div>
@@ -178,17 +198,15 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="row">
           <div class="col">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Videos</h5>
-                <p class="card-text">2,000</p>
-              </div>
-            </div>
+            <div class="videoUrl">Video URL: <a href="#">https://www.youtube.com/watch?v=HrnrqYxYrbk</a></div>
           </div>
         </div>
         <!--  -->
       </div>
+      <!--  -->
     </div>
 <!--  -->
 <hr>

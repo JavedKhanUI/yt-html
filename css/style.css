@@ -1,5 +1,9 @@
 a{text-decoration: none;}
 
+.accordion-button:not(.collapsed) {
+    background-color: unset;
+}
+
 .videoThumb {
     height: 100%;
     min-height: 215px;

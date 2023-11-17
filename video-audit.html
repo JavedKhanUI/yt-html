@@ -101,7 +101,6 @@
       You've reached your daily free limit.<strong>Please upgrade to Pro!.</strong> 
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-
     <div class="row mb-5">
       <div class="col">
         <div class="card border-0 shadow-lg">
@@ -154,9 +153,11 @@
     </div>
     <hr>
     <!--  -->
-    <div class="row mt-4 mb-5">
+    <div class="row mt-4 mb-5 h-100 align-items-center">
       <div class="col-lg-3">
-
+        <div class="chart-container text-center">
+          <canvas id="radialChart" width="200" height="200"></canvas>
+        </div>
       </div>
       <!--  -->
       <div class="col-lg-4">
@@ -208,326 +209,379 @@
       </div>
       <!--  -->
     </div>
-<!--  -->
-<hr>
-<div class="row">
-  <div class="col-8">
     <!--  -->
-     <ul class="nav d-flex justify-content-between mb-3">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#summery">Summery</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#top-video">Top Videos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#recent-videos">Recent Videos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#channel-audit">Channel audit</a>
-      </li>
-    </ul>
+    <div class="row justify-content-center my-4">
+      <div class="col-lg-6">
+        <ul class="list-group list-group-horizontal justify-content-center">
+          <li class="list-group-item fw-bold">Video Score:</li>
+          <li class="list-group-item"><i class="bi bi-record-circle-fill text-danger"></i> 0-49 </li>
+          <li class="list-group-item"><i class="bi bi-record-circle-fill text-warning"></i> 50-69</li>
+          <li class="list-group-item"><i class="bi bi-record-circle-fill text-success"></i> 70-100</li>
+        </ul>
+      </div>
+    </div>
     <!--  -->
-    <!--  -->
-    <ul class="nav flex-column">
-      <li class="card mb-3" id="summery">
-        <div class="card-body">
-          <!--  -->
-          <div class="row mb-3">
-            <div class="col">
-              <h3 class="border-bottom pb-2 h5">Statistics</h3>
-            </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card border-danger">
+          <div class="card-header">
+              <h5 class="text-danger fw-bold">PROBLEMS</h5>
+              <p class="mb-0">We have analyzed your videos and found some opportunities that you should focus on for better YouTube SEO performance which will improve your traffic and rankings. </p>
           </div>
-          <!--  -->
-          <!-- Start Summery -->
-          <div class="row row-cols-1 row-cols-md-2 g-3">
-            <div class="col">
-              <div class="ccard shadow bg-body-tertiary rounded border-light ">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <h5 class="card-title h6 m-0">Created Date</h5>
-                  <p class="card-title h6 badge text-bg-success p-2">Jan 1st, 1970</p>
-                </div>
-                <div class="card-body">
-                  <p class="card-text">This YouTube channel/account was created on this date.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow bg-body-tertiary rounded border-light ">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <h5 class="card-title h6 m-0">Country</h5>
-                  <p class="card-title h5 badge text-bg-light p-2">🇺🇸 US</p>
-                </div>
-                <div class="card-body">
-                  <p class="card-text">This YouTube channel/account was created on this date.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow bg-body-tertiary rounded border-light ">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <h5 class="card-title h6 m-0">Average Likes</h5>
-                  <p class="card-title h6 badge text-bg-warning p-2">163.4K</p>
-                </div>
-                <div class="card-body">
-                  <p class="card-text">This YouTube channel/account was created on this date.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow bg-body-tertiary rounded border-light">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <h5 class="card-title h6 m-0">Avg. Comments</h5>
-                  <p class="card-title h6 badge text-bg-info p-2">30,668</p>
-                </div>
-                <div class="card-body">
-                  <p class="card-text">This YouTube channel/account was created on this date.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Summery -->
-          <!--  -->
-          <div class="row my-3">
-            <div class="col">
-              <h3 class="border-bottom pb-2 h5">Income</h3>
-            </div>
-          </div>
-          <!--  -->
-          <div class="row row-cols-1 row-cols-md-2 g-3"> 
-            <div class="col">
-              <div class="card shadow bg-body-tertiary rounded border-0">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <h5 class="card-title h6 m-0">Est. Monthly Income</h5>
-                  <p class="card-title h6 badge text-bg-success p-2">$20.3K - $457.3K</p>
-                </div>
-                <div class="card-body">
-                  <p class="card-text">This YouTube channel/account was created on this date.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow bg-body-tertiary rounded border-0">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <h5 class="card-title h6 m-0">Est. Yearly Income</h5>
-                  <p class="card-title h6 badge text-bg-success p-2">$247.3K - $5.6M</p>
-                </div>
-                <div class="card-body">
-                  <p class="card-text">This YouTube channel/account was created on this date.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--  -->
-        </div>
-      </li>
-      <li class="card mb-3" id="top-video">
-        <div class="card-body">
-          <!--  -->
-          <div class="row mb-3">
-            <div class="col">
-              <h3 class="border-bottom pb-2 h5">Top Videos</h3>
-            </div>
-          </div>
-          <!--  -->
-          <ul class="d-flex flex-column p-0 ">
-            <li class="list-group-item">
-                <!--  -->
-                <div class="card mb-3">
-                  <div class="row g-0">
-                    <div class="col-md-3">
-                      <img src="https://i.ytimg.com/vi/LFJ5f6cVIHY/sddefault.jpg" class="rounded-start" alt="Video Thumbnail" height="152px" width="100%">
-                    </div>
-                    <div class="col-md-9">
-                      <div class="card-body p-3">
-                        <h5 class="card-title ">Express yourself on Shorts and show how you roll</h5>
-                        <p class="card-text">Who is the creepiest of them all? This Spooky Szn we had to ask @AyChristene  to create a spine-tingling tier list of the creepiest...</p>
-                        <ul class="count-view p-0 d-flex justify-content-between">
-                          <li class="count-list list-group-item"><i class="bi bi-hand-thumbs-up"></i>&nbsp;<a href="#">1,116,078</a></a></li>
-                          <li class="count-list list-group-item"><i class="bi bi-eye"></i>&nbsp;<a href="#">47,421,056</a></li>
-                          <li class="count-list list-group-item"><i class="bi bi-chat-dots"></i>&nbsp;<a href="#">2,186</a></li>
+          <div class="card-body">
+              <!--  --> 
+                <div class="accordion" id="accordionPanelsStayOpenProblem">
+                  <!--  -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        <span class="fw-bold"><i class="bi bi-record-circle-fill text-danger"></i> Focus Keyword</span>  - Haven't found any focus keyword in Title, Description, & Tags.
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                      <div class="accordion-body">
+                        <div class="text-danger fw-bold">
+                          <ul class="list-group list-group-horizontal">
+                            <li class="list-group-item"><i class="bi bi-x-circle-fill text-danger"></i> Title</li>
+                            <li class="list-group-item"><i class="bi bi-x-circle-fill text-danger"></i> Description</li>
+                            <li class="list-group-item"><i class="bi bi-x-circle-fill text-danger"></i> Tags</li>
                           </ul>
+                        </div>
+                        <p class="text-muted mt-2 m-0">It's crucial to use focus keywords. It helps to boost your visibility rapidly.</p>
                       </div>
                     </div>
                   </div>
-                </div>
-                <!--  -->
-            </li>
-            <!--  -->
-            <li class="list-group-item">
-              <!--  -->
-              <div class="card mb-3">
-                <div class="row g-0">
-                  <div class="col-md-3">
-                    <img src="https://i.ytimg.com/vi/rx_fHXqjXlg/sddefault.jpg" class="rounded-start" alt="Video Thumbnail" height="152px" width="100%">
-                  </div>
-                  <div class="col-md-9">
-                    <div class="card-body p-3">
-                      <h5 class="card-title ">Express yourself on Shorts and show how you roll</h5>
-                      <p class="card-text">Who is the creepiest of them all? This Spooky Szn we had to ask @AyChristene  to create a spine-tingling tier list of the creepiest...</p>
-                      <ul class="count-view p-0 d-flex justify-content-between">
-                        <li class="count-list list-group-item"><i class="bi bi-hand-thumbs-up"></i>&nbsp;<a href="#">1,116,078</a></a></li>
-                        <li class="count-list list-group-item"><i class="bi bi-eye"></i>&nbsp;<a href="#">47,421,056</a></li>
-                        <li class="count-list list-group-item"><i class="bi bi-chat-dots"></i>&nbsp;<a href="#">2,186</a></li>
-                        </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--  -->
-          </li>
-          <!--  -->
-          <li class="list-group-item">
-            <!--  -->
-            <div class="card mb-3">
-              <div class="row g-0">
-                <div class="col-md-3">
-                  <img src="https://i.ytimg.com/vi/SYS1BuyQYoc/sddefault.jpg" class="rounded-start" alt="Video Thumbnail" height="152px" width="100%">
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body p-3">
-                    <h5 class="card-title ">Express yourself on Shorts and show how you roll</h5>
-                    <p class="card-text">Who is the creepiest of them all? This Spooky Szn we had to ask @AyChristene  to create a spine-tingling tier list of the creepiest...</p>
-                    <ul class="count-view p-0 d-flex justify-content-between">
-                      <li class="count-list list-group-item"><i class="bi bi-hand-thumbs-up"></i>&nbsp;<a href="#">1,116,078</a></a></li>
-                      <li class="count-list list-group-item"><i class="bi bi-eye"></i>&nbsp;<a href="#">47,421,056</a></li>
-                      <li class="count-list list-group-item"><i class="bi bi-chat-dots"></i>&nbsp;<a href="#">2,186</a></li>
-                      </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--  -->
-        </li>
-          </ul>
-          <!--  -->
-        </div>
-      </li>
-      <li class="card mb-3" id="recent-videos">
-        <div class="card-body">
-          <!--  -->
-          <div class="row mb-3">
-            <div class="col">
-              <h3 class="border-bottom pb-2 h5">Recent Videos</h3>
-            </div>
-          </div>
-          <!--  -->
-          <ul class="d-flex flex-column p-0 ">
-            <li class="list-group-item">
-                <!--  -->
-                <div class="card mb-3">
-                  <div class="row g-0">
-                    <div class="col-md-3">
-                      <img src="https://i.ytimg.com/vi/LFJ5f6cVIHY/sddefault.jpg" class="rounded-start" alt="Video Thumbnail" height="152px" width="100%">
-                    </div>
-                    <div class="col-md-9">
-                      <div class="card-body p-3">
-                        <h5 class="card-title ">Express yourself on Shorts and show how you roll</h5>
-                        <p class="card-text">Who is the creepiest of them all? This Spooky Szn we had to ask @AyChristene  to create a spine-tingling tier list of the creepiest...</p>
-                        <ul class="count-view p-0 d-flex justify-content-between">
-                          <li class="count-list list-group-item"><i class="bi bi-hand-thumbs-up"></i>&nbsp;<a href="#">1,116,078</a></a></li>
-                          <li class="count-list list-group-item"><i class="bi bi-eye"></i>&nbsp;<a href="#">47,421,056</a></li>
-                          <li class="count-list list-group-item"><i class="bi bi-chat-dots"></i>&nbsp;<a href="#">2,186</a></li>
-                          </ul>
+                  <!--  -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        <span class="fw-bold"><i class="bi bi-record-circle-fill text-warning"></i> Audio Quality</span>  - Audio quality is average.
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <div class="card card-body">Video's audio level: -8.03dB.</div>
+                      <p class="text-muted mt-2 m-0">When the audio quality of your YouTube video is poor, no matter how amazing it looks, it will be of no use. You may lose viewers if your video requires them to strain to hear what you are saying. When you provide high-quality sound in your content, it's just as simple to get views. </p>
                       </div>
                     </div>
                   </div>
-                </div>
-                <!--  -->
-            </li>
-            <!--  -->
-            <li class="list-group-item">
-              <!--  -->
-              <div class="card mb-3">
-                <div class="row g-0">
-                  <div class="col-md-3">
-                    <img src="https://i.ytimg.com/vi/rx_fHXqjXlg/sddefault.jpg" class="rounded-start" alt="Video Thumbnail" height="152px" width="100%">
-                  </div>
-                  <div class="col-md-9">
-                    <div class="card-body p-3">
-                      <h5 class="card-title ">Express yourself on Shorts and show how you roll</h5>
-                      <p class="card-text">Who is the creepiest of them all? This Spooky Szn we had to ask @AyChristene  to create a spine-tingling tier list of the creepiest...</p>
-                      <ul class="count-view p-0 d-flex justify-content-between">
-                        <li class="count-list list-group-item"><i class="bi bi-hand-thumbs-up"></i>&nbsp;<a href="#">1,116,078</a></a></li>
-                        <li class="count-list list-group-item"><i class="bi bi-eye"></i>&nbsp;<a href="#">47,421,056</a></li>
-                        <li class="count-list list-group-item"><i class="bi bi-chat-dots"></i>&nbsp;<a href="#">2,186</a></li>
-                        </ul>
+                  <!--  -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                        <span class="fw-bold"><i class="bi bi-record-circle-fill text-warning"></i> Video Comments</span>   - Average comments on your video.
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <div class="card card-body">Your video has 13,140 comments.</div>
+                      <p class="text-muted mt-2 m-0">Engagement with comments not only demonstrates that you value what your fans and followers have to say, but it also boosts your YouTube ranking. It is more likely that videos with many likes, comments, replies, and moderation will rank higher in search results.</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!--  -->
-          </li>
-          <!--  -->
-          <li class="list-group-item">
-            <!--  -->
-            <div class="card mb-3">
-              <div class="row g-0">
-                <div class="col-md-3">
-                  <img src="https://i.ytimg.com/vi/SYS1BuyQYoc/sddefault.jpg" class="rounded-start" alt="Video Thumbnail" height="152px" width="100%">
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body p-3">
-                    <h5 class="card-title ">Express yourself on Shorts and show how you roll</h5>
-                    <p class="card-text">Who is the creepiest of them all? This Spooky Szn we had to ask @AyChristene  to create a spine-tingling tier list of the creepiest...</p>
-                    <ul class="count-view p-0 d-flex justify-content-between">
-                      <li class="count-list list-group-item"><i class="bi bi-hand-thumbs-up"></i>&nbsp;<a href="#">1,116,078</a></a></li>
-                      <li class="count-list list-group-item"><i class="bi bi-eye"></i>&nbsp;<a href="#">47,421,056</a></li>
-                      <li class="count-list list-group-item"><i class="bi bi-chat-dots"></i>&nbsp;<a href="#">2,186</a></li>
-                      </ul>
+                  <!--  -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                        <span class="fw-bold"><i class="bi bi-record-circle-fill text-warning"></i> Video End Screen</span>  - Haven't found any end screen in video.
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <div class="card card-body">----</div>
+                      <p class="text-muted mt-2 m-0">An End Screen (also known as an "End Card" or an "Endslate") appears in the last 5-20 seconds of a YouTube video. End screens can be used by YouTubers to promote videos, playlists, products, and external websites. Your End Screen can make your video more popular, get more traffic, and get more subscribers.</p>
+                      </div>
+                    </div>
                   </div>
+                  <!--  -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                        <span class="fw-bold"><i class="bi bi-record-circle-fill text-warning"></i> Video Card</span>  - Haven't found any type of card in video.
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <div class="card card-body">-----</div>
+                      <p class="text-muted mt-2 m-0">A card is an interactive element added to a YouTube video that can promote a video, playlist, website, merchandise, or channel. Cards can be viewed both on desktops and on mobile devices, unlike annotations.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                        <span class="fw-bold"><i class="bi bi-record-circle-fill text-warning"></i> Subtitles/CC</span>  - Subtitle is missing.
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <div class="card card-body">-----</div>
+                      <p class="text-muted mt-2 m-0">Subtitles are a great way to boost engagement across platforms. Every engagement metric—impressions, views, and likes—performs better with captioned videos. </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
                 </div>
-              </div>
-            </div>
-            <!--  -->
-        </li>
-          </ul>
-          <!--  -->
-        </div>
-      </li>
-      <li class="card mb-3" id="channel-audit">
-        <div class="card-body">
-          Most Liked dolor sit amet consectetur adipisicing elit. Earum possimus omnis perferendis laboriosam, aut necessitatibus recusandae et quasi cumque eos. Quae veritatis vel dolor nihil voluptatem consequatur maxime libero aperiam. Exercitationem ad cupiditate odit itaque asperiores repellat! Enim sunt minima excepturi, totam labore reprehenderit autem consectetur ipsum inventore, eaque qui. Exercitationem nobis consequuntur reiciendis esse vitae omnis earum mollitia ut sapiente? Beatae aut blanditiis eligendi quidem facere quia vitae magni error asperiores voluptates. Doloribus nisi at vitae rerum earum. Nihil dolorum ab dignissimos quam quo rerum nisi perferendis reiciendis, ea et autem sequi possimus dolores deleniti sapiente. Omnis, ab voluptate.
-
-          <a href="#" class="btn btn-danger w-100 mt-4"> Audit Your Channel Free</a>
-        </div>
-      </li>
-    </ul>
-    <!--  -->
-  </div>
-  <!--  -->
-  <div class="col-4">
-  <!--  -->
-  <ul class="d-flex flex-column p-0">
-    <li class="card w-100 mb-4">
-        <div class="card-body">
-          <h5 class="card-title">Live Subscriber Count</h5>
-          <p class="card-text display-6 fw-bold">1,357,00</p>
-        </div>
-    </li>
-    <li class="card w-100 mb-4">
-      <div class="card-body">
-        <h5 class="card-title mb-3">Related Channels</h5>
-        <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action list-group-flush">
-            @WWE
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">@Like Nastya</a>
-          <a href="#" class="list-group-item list-group-item-action">@Zee Music Company</a>
-          <a href="#" class="list-group-item list-group-item-action">@Vlad And Niki</a>
-          <a href="#" class="list-group-item list-group-item-action">@PewDiePie</a>
-          <a href="#" class="list-group-item list-group-item-action">@Gaming</a>
+              <!--  -->
+          </div>
         </div>
       </div>
-  </li>
-  </ul>
-  <!--  -->
+    </div>
+    <!--  -->
+     <hr>
+    <div class="row">
+      <div class="col">
+        <div class="card border-success">
+          <div class="card-header">
+            <h5 class="text-success fw-bold">PASSED RESULTS</h5>
+        </div>
+          <div class="card-body">
+            <!--  -->
+            <div class="accordion" id="accordionPassed">
+              <!--  -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <span class="fw-bold"><i class="bi bi-record-circle-fill text-success"></i> Video Title </span>- Video title has an acceptable length.
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionPassed">
+                  <div class="accordion-body">
+                    <div class="text-success fw-bold">ANIMAL: SATRANGA |Ranbir Kapoor, Rashmika |Sandeep V |Arijit, Shreyas P, Siddharth-Garima |Bhushan K</div>
+                    <p class="text-muted mt-2 m-0">Your video title is up-to-date. Make sure the title is unique and eye-catchy to get the user's attention. </p>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <span class="fw-bold"><i class="bi bi-record-circle-fill text-success"></i> Video Description</span> - Video description has an acceptable length.
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionPassed">
+                  <div class="accordion-body">
+                      <div class="card card-body">
+                      <p>PRESENTING "SATRANGA" FROM THE FILM ANIMAL STARRING RANBIR KAPOOR, RASHMIKA MANDANNA, ANIL KAPOOR, BOBBY DEOL & SHAKTI KAPOOR.
+                        GULSHAN KUMAR & T-SERIES PRESENT
+                        A T-SERIES FILMS, ST FILM LTD &
+                        BHADRAKALI PICTURES PRODUCTION
+                        #RANBIRKAPOOR #RASHMIKAMANDANNA IN #ANIMAL
+                        THE FILM BY #SANDEEPREDDYVANGA
+                        WORLDWIDE RELEASE ON 1ST DECEMBER 2023 IN CINEMAS IN HINDI, TELUGU, TAMIL, KANNADA & MALAYALAM
+                        <!-- Button trigger modal -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">View More</a></p> 
+                      </div>
+                    <p class="text-muted mt-2 m-0">Your YouTube description can boost your audience's interest and result in longer watch times, higher views, and even new subscribers. Additionally, it can boost your YouTube stats by allowing YouTube's algorithm to understand your content better and suggest it to new users.There is a character limit of 5,000 characters for the video description. You can certainly take advantage of all that space.</p>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <span class="fw-bold"><i class="bi bi-record-circle-fill text-success"></i> Video Tags</span> - Good job! Tags are available.
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionPassed">
+                  <div class="accordion-body">
+                    <div class="card card-body">
+                      hindi songs 2023,
+                      bollywood movies 2023,
+                      tseries,
+                      tseries songs,
+                      satranga,
+                      satranga animal,
+                      animal satranga,
+                      animal satranga arijit singh,
+                      arijit singh satranga,
+                      animal song satranga,
+                      satranga song animal,
+                      satranga arijit singh,
+                      satranga ranbir kapoor,
+                      satranga song ranbir kapoor,
+                      satranga rashmika mandanna,
+                      ranbir kapoor satranga,
+                      arijit singh satranga song,
+                      ranbir and rashmika song,
+                      ranbir kapoor and rashmika
+                    </div>
+                    <p class="text-muted mt-2 m-0">Appropriate tags have been added.</p>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <span class="fw-bold"><i class="bi bi-record-circle-fill text-success"></i> Video Thumbnail </span> - Thumbnail quality is good enough.
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionPassed">
+                  <div class="accordion-body">
+                    <div class="text-success fw-bold">
+                      <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 120x90</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 320x180</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 480x360</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 640x480</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 1280x720</li>
+                      </ul>
+                    </div>
+                    <p class="text-muted mt-2 m-0">When it comes to introducing your content to the world of online video, YouTube thumbnails are crucial. Often, viewers' decisions to click on a video are solely influenced by its thumbnail. In contrast, misleading and blurry images turn us away.</p>
+
+                    <p class="text-muted mt-2 m-0">Your YouTube thumbnail may still be blurry even if you are aware of the importance of a quality thumbnail. A minimum width of 640 pixels and a resolution of 1280 x 720 pixels are ideal. Make sure the aspect ratio is 16:9. Know the facts.</p>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <span class="fw-bold"><i class="bi bi-record-circle-fill text-success"></i> Video Quality </span> - The video quality is good.
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionPassed">
+                  <div class="accordion-body">
+                    <div class="text-success fw-bold">
+                      <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 144p</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 240p</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 360p</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 480p</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 720p</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 1080p</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 1440p</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 2160p</li>
+                      </ul>
+                    </div>
+                    <p class="text-muted mt-2 m-0">The video quality is good, but you may focus on the other aspects of the video quality. </p>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <span class="fw-bold"><i class="bi bi-record-circle-fill text-success"></i> Video Likes </span> - Excellent! Video has good likes.
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionPassed">
+                  <div class="accordion-body">
+                    <div class="text-success fw-bold">  Your video has 485,522 likes.</div>
+                    <p class="text-muted mt-2 m-0">Having more YouTube likes has many benefits. You can attract more viewers by having more video likes. There is a common belief among video viewers that videos with the most likes have the best content. Therefore, if you have tons of likes on your videos, you'll naturally attract viewers. </p>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    <span class="fw-bold"><i class="bi bi-record-circle-fill text-success"></i> Category </span>  - Video is categorized.
+                  </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionPassed">
+                  <div class="accordion-body">
+                    <div class="text-success fw-bold"> The video category is Music..</div>
+                    <p class="text-muted mt-2 m-0">On YouTube, video categories are used to organize videos and channels. Your video will certainly achieve better results if you apply it to the appropriate category. Your video is likely to be found much faster by your target audience if you use it.</p>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+            </div>
+            <!--  -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+  </main>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Video Disc</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body video-disc">
+        PRESENTING "SATRANGA" FROM THE FILM ANIMAL STARRING RANBIR KAPOOR, RASHMIKA MANDANNA, ANIL KAPOOR, BOBBY DEOL & SHAKTI KAPOOR.
+        GULSHAN KUMAR & T-SERIES PRESENT
+        A T-SERIES FILMS, ST FILM LTD &
+        BHADRAKALI PICTURES PRODUCTION
+        #RANBIRKAPOOR #RASHMIKAMANDANNA IN #ANIMAL
+        THE FILM BY #SANDEEPREDDYVANGA
+        WORLDWIDE RELEASE ON 1ST DECEMBER 2023 IN CINEMAS IN HINDI, TELUGU, TAMIL, KANNADA & MALAYALAM
+        ♪FULL SONG AVAILABLE ON♪
+        Spotify: https://bit.ly/3Qz6bvp
+        JioSaavn: https://bit.ly/3tPi2fY
+        Hungama: https://bit.ly/3sahcKm
+        Apple Music: https://bit.ly/3tMMB62
+        Amazon Prime Music: https://bit.ly/3Qw9P9t
+        Wynk: https://bit.ly/463KYhX
+        YouTube Music: https://bit.ly/498Id1o
+        CREDITS:
+        MUSIC DIRECTOR: SHREYAS PURANIK
+        LYRICIST: SIDDHARTH-GARIMA
+        SINGER: ARIJIT SINGH
+        MUSIC ARRANGEMENT AND PRODUCTION: DURGESH R RAJBHATT
+        LIVE GUITAR STROKES, BASS, AND PIANICA: SHOMU SEAL
+        SOUND DESIGN: SHOMU SEAL AND SHREYAS PURANIK
+        MIX & MASTER: ERIC PILLAI AT FUTURE SOUNDS OF BOMBAY
+        CHIEF ENGINEER & SHOOTMIX: RAHUL M SHARMA(STUDIO 504)
+        MUSIC SUPERVISOR VIVIN SACHDEVA
+        SOUND ENGINEERS: SAMIR DHARAP & ROHIT PATIL
+        ENGINEER (AT ARIJIT SINGH'S STUDIO): SUKARNO
+        MIXING ASSISTANT TO ERIC - MICHAEL EDWIN PILLAI
+        FILM CREDITS:
+        WRITER – EDITOR –DIRECTOR: SANDEEP REDDY VANGA
+        PRODUCED BY: BHUSHAN KUMAR, PRANAY REDDY VANGA, MURAD KHETANI, KRISHAN KUMAR
+        CO-PRODUCER: SHIV CHANANA, FIRUZI KHAN
+        PRESIDENT (T-SERIES): NEERAJ KALYAN
+        SCREENPLAY: SANDEEP REDDY VANGA, PRANAY REDDY VANGA & SURESH BANDARU
+        DIALOGUES: SAURABH GUPTA
+        DOP: AMIT ROY
+        PRODUCTION DESIGNER: SURESH SELVARAJAN
+        ACTION: SUPREME SUNDAR
+        COSTUME DESIGNER: SHEETAL IQBAL SHARMA
+        EXECUTIVE PRODUCER: MAHIPAL RATHORE
+        MUSIC: PRITAM, VISHAL MISHRA, MANAN BHARDWAJ, SHREYAS PURANIK, JAANI, ASHIM KEMSON, HARSHAVARDHAN RAMESHWAR, GURINDER SEAGAL
+        LYRICS: MANOJ MUNTASHIR, JAANI, SIDDHARTH-GARIMA, RAJ SHEKHAR, BHUPINDER BABBAL, MANAN BHARDWAJ, ASHIM KEMSON, GURINDER SEAGAL
+        BGM: HARSHAVARDHAN RAMESHWAR
+        SOUND DESIGN: SYNC CINEMA
+        SOUND MIXING: RAJA KRISHNAN M.R
+        ASSOC.EDITOR: MD. ZAYEEMUDDIN
+        ASSOC.DIRECTORS: SHANMUKHA GOWTHAM.G, SRIKANTH VARMA.G
+        1st AD: PRAATIEK DODEJA
+        PROJECT HEAD: ALOK KUMAR SHUKLA
+        POST PRODUCTION: DO IT CREATIVE, THE POST CO, NY DI-WAALA
+        LINE PRODUCER: MAX REHMAN, SHIV KUMAR
+        MARKETING & PROMOTIONS (T-SERIES): SHIVAM CHANANA, RAJ CHANANA, PRASHANT SHETTY, MITA CHOUDHARY, RAHUL DUBEY, AMOL BHAMARE, HEETT SAVLA
+        MUSIC ON: T-SERIES
+        MUSIC TEAM (T-SERIES): RAJ CHANANA, SHIVAM CHANANA, SONAL CHAWLA, SONU SRIVASTAVA, VIVIN SACHDEVA
+        PR AGENCY: COMMUNIQUÉ FILM PR
+        MARKETING AGENCY: VARUN GUPTA (MAX), WALLS & TRENDS
+        DIGITAL MARKETING: EVERYMEDIA
+        PUBLICITY DESIGN: ANIL & BHANU
+        VISUAL PROMOTION: JUST RIGHT STUDIOZ NX
+        Download Song Beat: https://bit.ly/3Cjh24R
+        ___________________________________
+        Enjoy & stay connected with us!
+        👉 Subscribe to T-Series: http://bit.ly/TSeriesYouTube
+        👉 Like us on Facebook: https://www.facebook.com/tseriesmusic
+        👉 Follow us on X: https://twitter.com/tseries
+        👉 Follow us on Instagram: http://bit.ly/InstagramTseries
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
 
-  </main>
-
-<footer class="pt-3 border-top">
+<footer class="pt-3 mt-4 border-top">
     <div class="row text-center">
       <div class="col-12 col-md">
         <!-- <img class="mb-2" src="#" alt="" width="24" height="19"> -->
@@ -537,7 +591,6 @@
   </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-
+<script src="script.js"></script>
     </body>
 </html>
